@@ -1,0 +1,27 @@
+{
+  "name": "@book/my-harness-tools",
+  "version": "0.1.0",
+  "description": "《DeepSeek Harness 插件开发指南》配套示例 bundle：一个时间工具 + 一个 hello 命令",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./command-hello": "./lib/command-hello.js",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT"
+}

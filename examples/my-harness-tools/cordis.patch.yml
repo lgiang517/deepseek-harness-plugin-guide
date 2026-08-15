@@ -1,0 +1,10 @@
+# 《DeepSeek Harness 插件开发指南》配套示例 bundle 的 patch 层。
+# 声明两行插件：主入口（时间工具）与子路径入口（hello 命令）。
+- insert:
+    - id: time-tool
+      name: '@book/my-harness-tools'
+      config:
+        timezone: 'Asia/Shanghai'
+
+    - id: command-hello
+      name: '@book/my-harness-tools/command-hello'

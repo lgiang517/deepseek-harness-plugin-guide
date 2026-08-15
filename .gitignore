@@ -1,0 +1,5 @@
+node_modules/
+.dsh-test/
+*.log
+.DS_Store
+Thumbs.db
