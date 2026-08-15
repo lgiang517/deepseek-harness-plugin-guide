@@ -126,6 +126,10 @@ hr { border:none; border-top:1px solid var(--border); margin:2em 0; }
 #toTop.show { opacity:1; pointer-events:auto; }
 #toTop:hover { color:var(--accent); border-color:var(--accent); }
 
+/* 遮罩（移动端侧栏背景）——始终默认隐藏，绝不占据桌面三栏网格的列 */
+#scrim { display:none; position:fixed; inset:0 0 0 0; background:rgba(15,23,42,.3); z-index:44; }
+#scrim.show { display:block; }
+
 /* 响应式 */
 @media (max-width:1180px) { .layout { grid-template-columns:230px minmax(0,1fr); } .notes { display:none; } }
 @media (max-width:860px) {
@@ -135,8 +139,6 @@ hr { border:none; border-top:1px solid var(--border); margin:2em 0; }
   .sidebar { position:fixed; top:var(--header-h); left:0; bottom:0; width:min(82vw,300px);
     background:var(--bg); border-right:1px solid var(--border); transform:translateX(-102%); transition:.25s; z-index:45; padding-top:16px; }
   .sidebar.open { transform:none; box-shadow:0 10px 40px rgba(0,0,0,.18); }
-  #scrim { display:none; position:fixed; inset:var(--header-h) 0 0 0; background:rgba(15,23,42,.3); z-index:44; }
-  #scrim.show { display:block; }
 }
 </style>
 </head>
